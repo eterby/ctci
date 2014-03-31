@@ -33,6 +33,9 @@
     <ClInclude Include="LeetC.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="Pie.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +51,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LeetC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
