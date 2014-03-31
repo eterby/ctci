@@ -36,8 +36,14 @@ public:
 
     void Combination()
     {
+        int length = _str.length();
 
-    
+        char *pOut = new char[length+1];
+        pOut[length] = '\0';       
+
+        _DoCombination(_str.c_str(), pOut, length, 0, 0);
+
+        FreeMem(pOut);    
     }
 
 private:
@@ -60,16 +66,16 @@ private:
         }
     }
 
-    void _DoCombination(const char in[], char out[], int length, int startPos, int currPos)
+    void _DoCombination(const char in[], char out[], int length, int startPos, int currLevel)
     {
         for (int i = startPos; i < length; i++)
         {
-            out[currPos] = in[i];
-            out[currPos+1] = '\0';
+            out[currLevel] = in[i];
+            out[currLevel+1] = '\0';
             printf("%s\n", out);
 
-            if (startPos < (length -1))
-                _DoCombination(in, out, length, startPos+1, currPos+1);
+            if (i < (length -1))
+                _DoCombination(in, out, length, i+1, currLevel+1);
         }
     }
 
@@ -80,4 +86,10 @@ void TestRecursive::TestPermutation()
 {
     Recursive r("abcd");
     r.Permutation();
+}
+
+void TestRecursive::TestCombination()
+{
+    Recursive r("abcd");
+    r.Combination();
 }

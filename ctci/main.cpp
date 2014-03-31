@@ -14,7 +14,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
     //TestTwoSum::Test();
 
-    TestRecursive::TestPermutation();
+    //TestRecursive::TestPermutation();
+
+    TestRecursive::TestCombination();
 
     return 0;
 }
